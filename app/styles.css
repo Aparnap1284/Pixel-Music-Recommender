@@ -1,0 +1,314 @@
+:root {
+  --pixel-primary: #FF2D75;
+  --pixel-secondary: #00F0FF;
+  --pixel-accent: #FFDE59;
+  --pixel-bg: #0f0c29;
+  --pixel-card: #1a103d;
+  --pixel-text: #e0aaff;
+  --pixel-border: 4px solid var(--pixel-accent);
+  --pixel-shadow: 4px 4px 0 var(--pixel-secondary);
+  --font-pixel: 'Press Start 2P', cursive;
+}
+.main .block-container {
+        max-width: 900px;  /* You can adjust this: 800-1000px usually feels good */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem;
+}
+/* Add spacing after section headers */
+.pixel-heading,
+.block-title {
+  margin-bottom: 2rem !important; /* Adds more breathing room */
+}
+
+/* Scale up mood images */
+.mood-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto;
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+  padding: 6px;
+  background-color: var(--pixel-card);
+  max-height: 300px; /* Increase this if you want it even bigger */
+}
+
+body, .stApp {
+  background-color: var(--pixel-bg);
+  color: var(--pixel-text);
+  font-family: var(--font-pixel), monospace;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px);
+  animation: moveGrid 100s linear infinite;
+  padding: 10px;
+}
+
+@keyframes moveGrid {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.nav-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stButton > button {
+  font-family: var(--font-pixel);
+  background: var(--pixel-primary);
+  color: black;
+  padding: 10px 20px;
+  border: 3px solid white;
+  box-shadow: var(--pixel-shadow);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.stButton > button:hover {
+  background: var(--pixel-accent);
+  transform: scale(1.05);
+}
+
+.block-title {
+  font-family: var(--font-pixel);
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin: 2rem auto 1rem auto;
+  background: linear-gradient(90deg, var(--pixel-primary), var(--pixel-secondary));
+  color: black;
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+}
+
+.pixel-heading {
+  font-family: var(--font-pixel);
+  color: var(--pixel-accent);
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  background-color: var(--pixel-card);
+  border: var(--pixel-border);
+  padding: 1rem;
+  box-shadow: var(--pixel-shadow);
+}
+
+ul li, p {
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+}
+
+textarea, select, input {
+  font-family: var(--font-pixel);
+  background-color: #1c113f;
+  color: var(--pixel-text);
+  border: 3px solid var(--pixel-accent);
+  box-shadow: 2px 2px 0 var(--pixel-secondary);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+button[type=submit] {
+  font-family: var(--font-pixel);
+  background: var(--pixel-secondary);
+  border: 3px solid white;
+  padding: 10px 20px;
+  box-shadow: var(--pixel-shadow);
+}
+button[type=submit]:hover {
+  background: var(--pixel-accent);
+  transform: scale(1.05);
+}
+
+.music-card {
+  background: var(--pixel-card);
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.music-card img {
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.music-title {
+  font-size: 1rem;
+  color: var(--pixel-accent);
+  font-family: var(--font-pixel);
+}
+.track-meta {
+  color: var(--pixel-text);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.genre-tag {
+  background: var(--pixel-secondary);
+  color: black;
+  padding: 2px 6px;
+  margin-right: 4px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-family: var(--font-pixel);
+}
+.track-actions a {
+  text-decoration: none;
+  background: var(--pixel-primary);
+  color: black;
+  padding: 5px 10px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 0 var(--pixel-accent);
+  font-family: var(--font-pixel);
+}
+.track-actions a:hover {
+  background: var(--pixel-accent);
+}
+
+img {
+  border: var(--pixel-border);
+  padding: 4px;
+  background-color: var(--pixel-card);
+  box-shadow: var(--pixel-shadow);
+  margin-top: 1rem;
+}
+
+.header {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, var(--pixel-primary), var(--pixel-secondary));
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+}
+.header h1 {
+  font-family: var(--font-pixel);
+  color: black;
+  font-size:xx-large;
+}
+.header p {
+  color: black;
+  font-size: 1 rem;
+}
+
+.footer {
+  margin-top: 3rem;
+  padding: 1.2rem;
+  text-align: center;
+  background: var(--pixel-card);
+  color: var(--pixel-accent);
+  font-family: var(--font-pixel);
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+}
+.footer a {
+  color: var(--pixel-secondary);
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+:root {
+  --pixel-bg: #0e001d;
+  --pixel-text: #f0e6ff;
+  --pixel-accent: #ff2d75;
+  --pixel-border: #7b2cbf;
+  --pixel-card: #1b1035;
+  --font-pixel: 'Press Start 2P', cursive;
+}
+
+/* Nav Bar */
+.nav-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-pixel);
+}
+
+/* Pixel Heading */
+.pixel-heading {
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  color: var(--pixel-accent);
+}
+
+/* Music Title Label */
+.music-title {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--pixel-text);
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Mood Title Block */
+.block-title {
+  font-family: var(--font-pixel);
+  font-size: 1.6rem;
+  color: var(--pixel-accent);
+  margin: 30px 0 20px;
+}
+
+/* Mood Detected Styling */
+.block-title.mood {
+  color: #00f0ff;
+}
+
+/* Form Elements */
+textarea, select {
+  font-family: var(--font-pixel);
+  background-color: var(--pixel-card);
+  color: var(--pixel-text);
+  border: 4px dashed var(--pixel-border);
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 3px 3px 0 #00f0ff;
+}
+
+/* Music Cards */
+.music-card {
+  background: var(--pixel-card);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 3px dotted var(--pixel-border);
+  box-shadow: 5px 5px 0 var(--pixel-accent);
+  border-radius: 8px;
+}
+
+.music-title {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--pixel-text);
+  margin-bottom: 0.5rem;
+}
+
+.genre-tag {
+  background: var(--pixel-accent);
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: white;
+}
+
+.track-actions a {
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  color: var(--pixel-text);
+  text-decoration: none;
+}
+
+/* Glitch Animation */
+.glitch {
+  animation: glitch 1.2s infinite;
+}
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  25% { text-shadow: -2px 0 cyan; }
+  50% { text-shadow: 2px 2px yellow; }
+  75% { text-shadow: -2px -2px lime; }
+  100% { text-shadow: 2px 0 red; }
+}
