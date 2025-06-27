@@ -22,7 +22,7 @@
 |---------------------|-----------------------------------------------|
 | 👨‍💻 Programming     | Python 3.11                                    |
 | 🔍 Data Handling     | Pandas, NumPy                                 |
-| 🧠 ML Algorithms     | scikit-learn (KNN, SVD), Cosine Similarity    |
+| 🧠 ML Algorithms     | scikit-learn (KNN, SVD)                       |
 | 🌐 Deployment        | Streamlit or Flask (your choice)              |
 | 🧪 Environment Mgmt | venv + .env for secrets                        |
 | 🔐 Version Control   | Git + GitHub                                  |
