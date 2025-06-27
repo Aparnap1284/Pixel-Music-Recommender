@@ -78,7 +78,7 @@ def main():
 
                 mood_gif = os.path.join(ASSETS_DIR, "mood_preview.gif")
                 if os.path.exists(mood_gif):
-                    st.image(mood_gif, caption="Live Mood Preview", use_container_width=True)
+                    st.markdown(f'<img src="data:image/gif;base64,{base64.b64encode(open(mood_gif, "rb").read()).decode()}" class="mood-preview" alt="Mood Preview" />', unsafe_allow_html=True)
                 else:
                     st.warning("⚠️ Default mood preview GIF not found.")
                 st.caption("🔍 Mood preview always live")
@@ -107,12 +107,15 @@ def main():
                         # Now display the card with embedded image
                     st.markdown(f"""
                     <div class="music-card">
-                    <div style="display:flex; align-items:center; gap:15px;">
-                        <img src="{encoded_img}" width="60" style="border-radius:8px;" />
-                        <div>
+                    <img src="{encoded_img}" alt="{title}" />
+                    <div>
                         <p class="music-title">{title}</p>
-                        <p class="track-meta"><span class="genre-tag">{genre_tag}</span><span class="genre-tag">{mood_tag}</span></p>
-                        <div class="track-actions"><a href="{yt_url}" target="_blank">▶ YouTube</a></div>
+                        <p class="track-meta">
+                        <span class="genre-tag">{genre_tag}</span>
+                        <span class="genre-tag">{mood_tag}</span>
+                        </p>
+                        <div class="track-actions">
+                        <a href="{yt_url}" target="_blank">▶ YouTube</a>
                         </div>
                     </div>
                     </div>
