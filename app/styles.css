@@ -9,12 +9,38 @@
   --pixel-shadow: 4px 4px 0 var(--pixel-secondary);
   --font-pixel: 'Press Start 2P', cursive;
 }
+/* Add this to your CSS */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* centers the container */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto; /* prevent vertical stretch */
+  display: block;
+}
+
+button, input, textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .main .block-container {
         max-width: 900px;  /* You can adjust this: 800-1000px usually feels good */
         margin-left: auto;
         margin-right: auto;
         padding: 2rem;
 }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* prevents overflow stretching */
+  align-items: flex-start;
+  justify-content: center;
+}
+
 /* Add spacing after section headers */
 .pixel-heading,
 .block-title {
