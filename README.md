@@ -58,9 +58,6 @@ Pixel-Music-Recommender/
 ├── .gitignore
 └── README.md # This file!
 
-yaml
-Copy
-Edit
 
 ---
 
